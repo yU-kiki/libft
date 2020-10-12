@@ -6,8 +6,20 @@
 /*   By: yikeda <yikeda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 17:11:57 by yikeda            #+#    #+#             */
-/*   Updated: 2020/10/09 17:11:59 by yikeda           ###   ########.fr       */
+/*   Updated: 2020/10/12 18:48:19 by yikeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_putstr_fd(char *s, int fd)
+{
+	int		i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+}
