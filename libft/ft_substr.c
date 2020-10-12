@@ -6,7 +6,7 @@
 /*   By: yikeda <yikeda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:29:41 by yikeda            #+#    #+#             */
-/*   Updated: 2020/10/09 13:52:19 by yikeda           ###   ########.fr       */
+/*   Updated: 2020/10/12 13:22:25 by yikeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		max_len = ft_strlen(&s[start]);
 		if (max_len < len)
 			len = max_len;
-		if (!(dst = malloc((len + 1) * sizeof(char))))
+		if (!(dst = malloc(sizeof(char) * (len + 1))))
 			return (NULL);
 		i = 0;
 		while (s[i] && i < len)
