@@ -56,7 +56,7 @@ OBJS	=	${SRCS:.c=.o}
 .c.o:
 			${CC} ${CFLAGS}	-I ${INCDIR} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS}
+$(NAME):	${OBJS}
 			ar	rc	${NAME}	${OBJS}
 
 all:		${NAME}

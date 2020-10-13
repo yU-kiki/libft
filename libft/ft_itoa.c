@@ -6,7 +6,7 @@
 /*   By: yikeda <yikeda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 17:10:26 by yikeda            #+#    #+#             */
-/*   Updated: 2020/10/12 18:27:47 by yikeda           ###   ########.fr       */
+/*   Updated: 2020/10/13 13:20:23 by yikeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,15 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	len = 0;
 	negative = 0;
+	len = ft_count_figure_length(n);
 	if (ft_isnegative(n) == 1)
 	{
 		len = ft_count_figure_length(n *= -1) + 1;
 		negative = 1;
 	}
-	else
-		len = ft_count_figure_length(n);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
+	str[len] = '\0';
 	while (len--)
 	{
 		str[len] = n % 10 + '0';
