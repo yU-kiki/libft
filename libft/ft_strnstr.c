@@ -6,7 +6,7 @@
 /*   By: yikeda <yikeda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 16:01:13 by yikeda            #+#    #+#             */
-/*   Updated: 2020/10/07 14:10:48 by yikeda           ###   ########.fr       */
+/*   Updated: 2020/10/13 16:04:44 by yikeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		n;
 	size_t	needle_len;
 
+	if (len == 0 && needle != NULL)
+		return (NULL);
 	needle_len = ft_strnlen(needle, len);
 	if (needle_len == 0)
 		return ((char *)haystack);
