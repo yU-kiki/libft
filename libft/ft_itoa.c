@@ -6,13 +6,13 @@
 /*   By: yikeda <yikeda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 17:10:26 by yikeda            #+#    #+#             */
-/*   Updated: 2020/10/13 13:20:23 by yikeda           ###   ########.fr       */
+/*   Updated: 2020/10/14 13:15:00 by yikeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isnegative(int n)
+static	int		ft_isnegative(int n)
 {
 	int		negative;
 
@@ -22,7 +22,7 @@ int		ft_isnegative(int n)
 	return (negative);
 }
 
-int		ft_count_figure_length(int n)
+static	int		ft_count_figure_length(int n)
 {
 	int		length;
 
@@ -35,7 +35,7 @@ int		ft_count_figure_length(int n)
 	return (length);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*str;
 	int		len;

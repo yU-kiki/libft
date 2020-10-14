@@ -6,13 +6,13 @@
 /*   By: yikeda <yikeda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 14:25:53 by yikeda            #+#    #+#             */
-/*   Updated: 2020/10/08 15:09:54 by yikeda           ###   ########.fr       */
+/*   Updated: 2020/10/14 13:09:06 by yikeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+static	char	*ft_strcpy(char *dst, const char *src)
 {
 	int		i;
 
@@ -26,7 +26,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-char	*ft_strdup(const char *s1)
+char			*ft_strdup(const char *s1)
 {
 	char *dst;
 
